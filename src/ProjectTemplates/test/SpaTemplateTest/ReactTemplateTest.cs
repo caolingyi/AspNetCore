@@ -14,7 +14,7 @@ namespace Templates.Test.SpaTemplateTest
         {
         }
 
-        [Fact]
+        [Fact(Skip = "https://github.com/aspnet/AspNetCore-Internal/issues/1820")]
         public void ReactTemplate_Works_NetCore()
             => SpaTemplateImpl("react");
     }
