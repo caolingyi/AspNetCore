@@ -1245,6 +1245,11 @@ namespace Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http
 
         public void ReportApplicationError(Exception ex)
         {
+            if (ex == null)
+            {
+                return;
+            }
+
             if (_applicationException == null)
             {
                 _applicationException = ex;
